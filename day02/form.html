@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 文本提交数据 -->
+    <form action="https://www.baidu.com/s" method="GET">
+        <input type="text" name="wd">
+        <input type="submit" value="百度一下">
+    </form>
+
+    <!-- 单选框提交数据 -->
+    <form action="">
+        请选择<input name="single" value="a" type="radio"> A
+             <input name="single" value="b" type="radio"> B
+             <input name="single" value="c" type="radio"> C
+        <input type="submit">
+    </form>
+
+    <!-- 多选框提交数据 -->
+    <form action="">
+        多选题请选择：
+        <input name="many" value="a" type="checkbox"> A
+        <input name="many" value="b" type="checkbox"> B
+        <input name="many" value="c" type="checkbox"> C
+        <input type="submit">
+    </form>
+
+    <!-- 下拉框提交数据 -->
+    <form action="">
+        <div>
+            请选择：
+            <select name="drop_down" id="">
+                <option value="P2005" selected='selected'>P2005</option>
+                <option value="P2005">P2006</option>
+                <option value="P2005">P2007</option>
+                <option value="P2005">P2008</option>
+            </select>
+            <input type="submit">
+        </div>
+    </form>
+    
+</body>
+</html>
