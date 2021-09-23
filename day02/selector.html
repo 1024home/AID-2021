@@ -20,11 +20,28 @@
             padding: 0;
             margin: 0;
         }
+        /* 子代选择器 */
+        body li{
+            color: burlywood;
+        }
+        ul>li{
+            font-size: 30px;
+        }
+        /* 鼠标滑过时发生改变 */
+        ul>li:hover{
+            color: chocolate;
+            transition: color 1s;
+        }
     </style>
 </head>
 <body>
     <div id="title" class="red">选择器的使用</div>
     <div class="red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam laboriosam quidem reiciendis, facere rerum beatae totam deleniti deserunt, amet magni accusamus eos architecto. Explicabo repellat possimus reiciendis ad, ex magnam.</div>
     <p class="red center">你是谁啊</p>
+    <ul>
+        <li>举头望明月</li>
+        <li>低头思故乡</li>
+        <li>菊花爆满山</li>
+    </ul>
 </body>
 </html>
