@@ -7,6 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <input id="inp" type="text" value="">
+    <button id="but">戳一下呦</button>
+    <h1 id="title"></h1>
+
+    <script>
+        var inp = document.getElementById('inp')
+        var but = document.getElementById('but')
+        var title = document.getElementById('title')
+
+        but.onclick = function(){
+            title.innerText = inp.value
+        }
+    </script>
 </body>
 </html>

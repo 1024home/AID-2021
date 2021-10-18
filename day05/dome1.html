@@ -5,8 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        ul,li{
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+            float: left;
+        }
+        ul{
+            border: 1px solid rebeccapurple;
+        }
+        .red{
+            padding: 0px 5px;
+            margin: 5px 3px;
+        }
+        .difficulty{
+            color: #666;
+            padding: 4.5px 2px;
+        }
+        .red:hover{
+            background-color: orangered;
+            color: seashell;
+        }
+    </style>
 </head>
 <body>
-    
+    <ul>
+        <li class="difficulty">难度：</li>
+        <li class="red">全部</li>
+        <li class="red">初级</li>
+        <li class="red">中级</li>
+        <li class="red">高级</li>
+    </ul>
+
+    <script>
+        var red = document.getElementsByClassName('red')
+        // for(var i = 0;i<red.length;i++){
+        //     red[i].onclick = (function(i_inner){
+        //         return function(){
+        //             alert(red[i_inner].innerHTML);
+        //         }
+        //     })(i)
+        // }
+
+        // for(let i = 0;i<red.length;i++){
+        //     red[i].onclick = function(){
+        //         alert(red[i].innerHTML)
+        //     }
+        // }
+
+        for(let i = 0;i<red.length;i++){
+            red[i].onclick = function(){
+                alert(this.innerHTML)
+            }
+        }
+    </script>
 </body>
 </html>
