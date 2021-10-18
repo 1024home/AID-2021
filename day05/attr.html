@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit assumenda veniam aliquam atque quod deleniti, aspernatur, blanditiis esse distinctio quaerat sapiente commodi quisquam numquam corrupti ex omnis autem excepturi quibusdam?
+    </div>
+    <button id="btn">变红</button>
+    <button id="clear">还原</button>
+
+    <script>
+        var div = document.getElementById('content')
+        var btn = document.getElementById('btn')
+        var clear = document.getElementById('clear')
+
+        btn.onclick = function(){
+            div.setAttribute('class','red')
+        }
+        clear.onclick = function(){
+            // div.setAttribute('class','')
+            div.removeAttribute('class')
+        }
+
+    </script>
+</body>
+</html>
