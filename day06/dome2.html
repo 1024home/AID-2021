@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="lom">
+    <button id="btn">搜索</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut, rem dolores fugit reiciendis numquam molestiae fugiat nesciunt sit suscipit quos iste vero, temporibus ipsa minima quasi, dolor excepturi totam!</p>
+
+    <script>
+        var btn = document.getElementById('btn')
+        var str_p = document.getElementsByTagName('p')[0]
+        var lom = document.getElementById('lom')
+
+        btn.onclick = function(){
+            var receive = lom.value
+            var re = new RegExp(receive);
+
+            if(re.test(str_p.innerText)){
+                alert('有匹配到以下内容:'+ receive)
+                str_p.setAttribute('class','red')
+            }else{
+                alert('没有匹配到以下内容:' +receive)
+            }
+            
+        }
+    </script>
+</body>
+</html>

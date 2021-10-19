@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正则表达式</title>
+</head>
+<body>
+    <script>
+        // i忽略大小写，g查找全部
+        var re1 = /this/gi;
+        var re2 = new RegExp('ths')
+
+        var str = 'This is a test string'
+
+        // test 判断有没有要找的内容，如果有返回true，否则返回false
+        console.log(re1.test(str))
+        console.log(re2.test(str))
+
+        // 查找内容
+        console.log(str.match('this'))
+        console.log(str.match(re1))
+
+        // 找到之后替换
+        var res = str.replace(re1,'thy')
+        console.log(res)
+    </script>
+</body>
+</html>
