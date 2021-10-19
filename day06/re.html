@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正则表达式</title>
+</head>
+<body>
+    <script>
+        var re1 = /this/
+        var re2 = new RegExp('ths')
+
+        var str = 'this is a test string'
+
+        // test只能检测是否存在，返回true或者false
+        console.log(re1.test(str))
+        console.log(re2.test(str))
+        
+    </script>
+</body>
+</html>

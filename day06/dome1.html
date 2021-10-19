@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="mailbox" placeholder="请输入邮箱地址">
+    <button id="btn">获取用户名和服务商</button>
+    <table>
+        <tbody></tbody>
+    </table>
+    <script>
+        
+        var btno = document.getElementById('btn')
+        var mlbx = document.getElementsByClassName('mailbox')
+        var tbody = document.getElementsByTagName('tbody')[0]
+        btno.onclick = function(){
+            for(var i=0;i<mlbx.length; i++){
+                var email_str = mlbx[i].value
+                var index = email_str.indexOf('@')
+                var email_name = email_str.substring(0,index)
+                var email_business = email_str.substring(index + 1)
+
+                var html = ''
+                html += '<tr>';
+                html += '<td>用户名:'+email_name+'</td>';
+                html += '<td>服务商:'+email_business+'</td>';
+                html += '</tr>';
+
+                tbody.innerHTML = html
+
+            }
+        }
+    </script>
+</body>
+</html>

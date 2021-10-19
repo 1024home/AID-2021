@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = 'hello'
+        // 字符串转换成大写
+        console.log(str.toUpperCase())
+        // 字符串转换成小写
+        console.log(str.toLowerCase())
+        // 根据下标找对应的内容
+        console.log(str.charAt(2))
+        // 根据下标找对应的编码
+        console.log(str.charCodeAt(4))
+        // 获取指定字符的下标。第二个值是起始位置
+        console.log(str.indexOf('e'))
+
+        // 截取字符串根据指定的下标范围截取字符串。
+        // substring从什么位置开始～结束位置-1
+        var num_str = 'this is a rest sting kiss miss'
+        console.log(num_str.substring(2,9))
+
+        // substr从什么位置开始-截取几位数
+        console.log(num_str.substr(4,10))
+    </script>
+</body>
+</html>
