@@ -7,9 +7,37 @@
     <title>Document</title>
 </head>
 <body>
+    <button id="btn1">启动定时器</button>
+    <button id="btn2">停止定时器</button>
     <script>
-        var res = confirm('确定删除吗？')
-        console.log(res)
+        // var res = confirm('确定删除吗？')
+        // console.log(res)
+
+        // 一次性定时器
+        setTimeout(function(){
+            alert('你好啊👋')
+        },3000) //3秒钟自动执行
+
+        var btn1 = document.getElementById('btn1')
+        var btn2 = document.getElementById('btn2')
+
+        // 周期性定时器
+        btn1.onclick = function(){
+            timeID = setInterval(function(){
+            console.log(1)
+
+            },1000) //一秒钟执行一次
+        }
+        
+        // 点击停止定时器自动停止运行
+        btn2.onclick = function(){
+            clearInterval(timeID)
+            console.log('已停止运行')
+        }
+
+
+        
+        
     </script>
 </body>
 </html>

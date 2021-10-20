@@ -5,14 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        ul,li{
+            margin: 0%;
+            padding: 0%;
+
+        }
+        li{
+            float: left;
+            list-style: none;
+            border: 1px solid red;
+        }
+
+    </style>
 </head>
 <body>
     <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li><img src="../imgs/bk0-8.jpg" alt=""></li>
+        <li><img src="../imgs/bk5-8.jpg" alt=""></li>
+        <li><img src="../imgs/bk1-8.jpg" alt=""></li>
+        <li><img src="../imgs/bk3-8.jpg" alt=""></li>
+        <li><img src="../imgs/bk2-8.jpg" alt=""></li>
     </ul>
+
+    <script>
+        var imgs = document.getElementsByTagName('img')
+        var srcArr = [0,1,2,3,4,5,6,7,8,9];
+        // 随机取出数组的5个数字
+        // 生成0～9之间的随机数  根据随机数取值
+        var randArr = [];//保存取出的随机数
+        while (randArr.length<5){
+            var i = parseInt(Math.random()*10);
+            // 如果随机数在数组中 就不添加 不在就添加
+            if (randArr.indexOf(i)<0){
+                randArr.push(i)
+            }
+        }
+        console.log(randArr);
+
+        // 通过随机产生的数组  替换页面中图片的路径
+        // 通过随机数获取新路径
+        function getImgUrl(num){
+            return '../imgs/bk'+num+'-8.jpg'
+        }
+        var imgs = document.getElementsByTagName('img');
+        for(var i=0;i<randArr.length;i++){
+            imgs[i].src = getImgUrl(randArr[i]);
+        }
+    </script>
 </body>
 </html>

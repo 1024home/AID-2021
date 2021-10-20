@@ -13,17 +13,25 @@
             // 接收数字 如果输入的是一位数字补零
             return num<10?'0' + num:num+''
         }
-        var s_now = new Date()
-        var e_now = new Date('2021/10/20 12:00:00')
+        timeID = setInterval(function(){
+            var s_now = new Date()
+            var e_now = new Date('2021/10/20 13:37:00')
 
-        // 时间差转换为秒
-        var leftTime = parseInt((e_now - s_now) / 1000);
-        var h = parseInt(leftTime / 3600);
-        var m = parseInt(leftTime % 3600 / 60);
-        var s = parseInt(leftTime % 60);
+            // 时间差转换为秒
+            var leftTime = parseInt((e_now - s_now) / 1000);
+            if(leftTime<=0){
+                clearInterval(timeID)
+            }
+            var h = parseInt(leftTime / 3600);
+            var m = parseInt(leftTime % 3600 / 60);
+            var s = parseInt(leftTime % 60);
 
-        var h3 = document.getElementsByTagName('h3')[0]
-        h3.innerHTML = `${addZero(h)}:${addZero(m)}:${addZero(s)}`
+            var h3 = document.getElementsByTagName('h3')[0]
+        
+            h3.innerHTML = `${addZero(h)}:${addZero(m)}:${addZero(s)}`
+        },1000)
+           
+        
     </script>
 </body>
 </html>
