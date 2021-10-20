@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var date_now = new Date()
+        console.log(date_now)
+
+        // 获取时间日期 get
+        date_now.getFullYear(); //获取年份
+        date_now.getMonth(); //获取月份
+        date_now.getDate(); //获取日期
+        date_now.getDay(); //获取星期
+        date_now.getHours(); //获取小时
+        date_now.getMinutes(); //获取分钟
+        date_now.getSeconds(); //获取秒钟
+
+        // 设置时间日期 set
+        var f = new Date('2021-11-01 12:00:00')
+        console.log(f)
+
+        // 时间差为毫秒  1000ms = 1s
+        console.log(date_now.getTime()) // 当前时间戳
+        console.log(f.getTime()) // 设定日期的时间戳
+
+        // 时间差
+        var leftTime = f-date_now
+        console.log(leftTime)
+
+    </script>
+</body>
+</html>

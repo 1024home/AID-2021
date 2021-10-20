@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>00:00:00</h3>
+    <script>
+        function addZero(num){
+            // 接收数字 如果输入的是一位数字补零
+            return num<10?'0' + num:num+''
+        }
+        var s_now = new Date()
+        var e_now = new Date('2021/10/20 12:00:00')
+
+        // 时间差转换为秒
+        var leftTime = parseInt((e_now - s_now) / 1000);
+        var h = parseInt(leftTime / 3600);
+        var m = parseInt(leftTime % 3600 / 60);
+        var s = parseInt(leftTime % 60);
+
+        var h3 = document.getElementsByTagName('h3')[0]
+        h3.innerHTML = `${addZero(h)}:${addZero(m)}:${addZero(s)}`
+    </script>
+</body>
+</html>

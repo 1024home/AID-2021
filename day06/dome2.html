@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .red{
+        span{
             color: crimson;
         }
     </style>
@@ -14,7 +14,8 @@
 <body>
     <input type="text" id="lom">
     <button id="btn">搜索</button>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut, rem dolores fugit reiciendis numquam molestiae fugiat nesciunt sit suscipit quos iste vero, temporibus ipsa minima quasi, dolor excepturi totam!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut, rem dolores fugit reiciendis 
+    numquam molestiae fugiat nesciunt sit suscipit quos iste vero, temporibus ipsa minima quasi, dolor excepturi totam!</p>
 
     <script>
         var btn = document.getElementById('btn')
@@ -27,7 +28,8 @@
 
             if(re.test(str_p.innerText)){
                 alert('有匹配到以下内容:'+ receive)
-                str_p.setAttribute('class','red')
+                var res = str_p.innerText.replace(re,'<span>'+receive+'</span>')
+                str_p.innerHTML = res
             }else{
                 alert('没有匹配到以下内容:' +receive)
             }
