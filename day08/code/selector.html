@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="title">望庐山瀑布</h3>
+    <ul>
+        <li class="item">日照香炉生紫烟</li>
+        <li class="item">遥看瀑布挂前川</li>
+        <li>飞流直下三千尺</li>
+        <li>疑是银河落九天</li>
+    </ul>
+    <script src="../js/jquery.min.js"></script>
+
+    <script>
+        $('#title').css('color','red').css('text-align','center')
+        // $('.item+li+li').css('color','blue')
+
+        // 过滤选择器
+        $('.item:first').css('color','blue')  //第一个元素
+        $('li:last').css('color','blue')  //最后一个元素
+        $('li:odd').css('color','pink')  //匹配下标为奇数的元素
+        $('li:eq(3)').css('color','pink') // 等于
+        $('li:lt(3)').css('color','pink') // 小于
+        $('li:gt(3)').css('color','pink') // 大于
+        $('li:not(li:first)').css('color','pink').css('font-size','18px') // 除了第一个以外的元素
+    </script>
+</body>
+</html>

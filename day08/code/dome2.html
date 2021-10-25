@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+</head>
+<body>
+    <input type="text" name="提交" id="key">
+    <h3></h3>
+    <script>
+        // 点击时弹窗出现
+        // $('#key').click(function(){
+        //     alert('你好')
+        // })
+        
+        // onchange 值改变时出发的事件
+        $('#key').change(function(){
+            $('h3').html($('#key').val())
+        })
+    </script>
+</body>
+</html>

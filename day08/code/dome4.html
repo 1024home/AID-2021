@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+</head>
+<body>
+    <form action="" onsubmit="return checkForm()">
+        <div>账号：<input type="text" name="uname"></div>
+        <div>密码：<input type="password" name="pwd"></div>
+        <div><input type="checkbox" id="canLogin"><a href="#">协议</a></div>
+        <div><input type="submit" value="登录"></div>
+    </form>
+
+    <script>
+        function checkCanLongin(){
+            // 检测复选框是否被选中
+            return $('#canLogin').prop('checked')
+        }
+
+        function checkName(){
+            // 检测用户名
+            return true
+        }
+
+        function checkPassword(){
+            // 检测密码
+            return true
+        }
+
+        function checkForm(){
+            return checkCanLongin() && checkName() && checkPassword()
+        }
+    </script>
+</body>
+</html>
