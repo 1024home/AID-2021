@@ -1,0 +1,42 @@
+/* 首页样式文件 */
+
+/* 初始化页面元素样式 */
+h1,h2,h3,p,body,ul,li{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    /* 去掉列表默认的小黑点 */
+    list-style: none;
+}
+a{
+    /* 去掉下划线 */
+    text-decoration: none; 
+}
+img{
+    display: block;
+}
+body{
+    /* 指定使用具体字体和大小 */
+    font-family: 'Courier New', Courier, monospace;
+    font: 16px;
+}
+
+
+/* **************************** header ********************************* */
+header{
+    width: 100%;
+    height: 80px;
+    background-color: #555;
+}
+nav{
+    /* 控制内容的位置 */
+    width: 1080px;
+    height: 80px;
+    margin: 0 auto;
+    line-height: 80px;
+}
+.logo>a{
+    font-size: 26px;
+    color:  rgb(207, 245, 245);
+}
