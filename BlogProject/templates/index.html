@@ -8,6 +8,16 @@
     
     <!-- 引入外部css文件 -->
     <link rel="stylesheet" href="../static/css/index.css">
+    <!-- 引入外部js文件 -->
+    <script src="../static/js/jquery.min.js"></script>
+    <!-- 博客列表相关数据 -->
+    <script src="../static/js/blogs.data.js"></script>
+    <!-- 轮播图数据 -->
+    <script src="../static/js/fader.data.js"></script>
+    <!-- jQuery提供的轮播插件 -->
+    <script src="../static/js/jquery.easyfader.min.js"></script>
+    <!-- 自定义js文件 -->
+    <script src="../static/js/index.js"></script>
 </head>
 <body>
     <header>
@@ -22,23 +32,76 @@
                 <li><a href="#">发表博客</a></li>
             </ul>
             <div>
-                <a href="#" id="login">登录</a>
                 <a href="#" id="register">注册</a>
+            <a href="#" id="login">登录</a>
             </div>
         </nav>
     </header>
     <main>
-        <div class="banner">
-            <ul class="fader">
-                <li class="slide">
-                    <a href="#"><img src="../static/images/banner01.jpg" alt="banner1">
-                        <span class="imginfo">爬虫微课5小时 Python 学习路线！</span>
-                    </a>
+        <div>
+            <!-- 左侧轮播图 -->
+            <div class="banner">
+                <ul class="fader">
+                    <li class="slide">
+                        <a href="#"><img src="../static/images/banner01.jpg" alt="banner1">
+                            <span class="imginfo">爬虫微课5小时 Python 学习路线！</span>
+                        </a>
+                    </li>
+                    <li class="fader_controls">
+                        <!-- 左右箭头 -->
+                        <div class="prev"><</div>
+                        <div class="next">></div>
+                        <ul class="pager_list">
+                            <!-- 轮播图页标 -->
+                            <li></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+            </div>
+            <ul class="toppic">
+
+                <li><a href="#"><i><img src="../static/images/toppic01.jpg" alt=""></i></a>
+                <div>linux 升级py3,安装pip,svn</div>
+                <span>Linux</span>
                 </li>
+
+                <li><a href="#""><i><img src="../static/images/toppic02.jpg" alt=""></i>
+                <div>精通Python编程--Python深入浅出教程</div>
+                <span>Python</span>
+                </a></li>
+
             </ul>
-            
+            <div class="clear"></div>
+        </div>
+        <!-- 博客列表 -->
+        <div class="blogsbox">
+            <!-- 每一条博客 -->
+            <div class="blog">
+                <!-- 博客标题 -->
+                <h3 class="blogtitle"><a href="#">Python语言在人工智能（AI）中的优势</a></h3>
+                <!-- 博客图片 -->
+                <div class="blogpic">
+                    <a href="#"><img src="../static/images/a.jpg" alt=""></a>
+                </div>
+                <!-- 博客文本 -->
+                <p class="blogtext">就这样，Python在Guido手中诞生了。可以说，Python是从ABC发展起来，主要受到了Modula-3 的影响。并且结合了Unix shell和C的习惯。</p>
+                <!-- 信息列表 -->
+                <ul>
+                    <li class="author"><a href="#">皮皮璐</a></li>
+                    <li class="lmname"><a href="#">学无止境</a></li>
+                    <li class="timer"><a href="#">2021-10-30</a></li>
+                    <li class="viev"><a href="#">34781</a></li>
+                    <li class="like"><a href="#">9022</a></li>
+                </ul>
+            </div>
         </div>
     </main>
-    <footer></footer>
+    <footer>
+        <div>据说喜欢分享的,后来都成了大神
+            <a href="#">个人博客</a>
+            <a href="#">备案号：882932099284202</a>
+        </div>
+    </footer>
 </body>
 </html>

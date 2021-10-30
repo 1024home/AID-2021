@@ -30,10 +30,11 @@ header{
     background-color: #555;
     position: fixed;
     top: 0;
+    z-index: 999;
 }
 nav{
     /* 控制内容的位置 */
-    width: 1460px;
+    width: 1080px;
     height: 80px;
     margin: 0 auto;
     line-height: 80px;
@@ -47,11 +48,11 @@ nav{
 /* 导航菜单 */
 nav>ul{
     float: left;
-    padding-left: 80px;
+    padding-left: 75px;
 }
 nav>ul>li{
     float: left;
-    padding-left: 74px;
+    padding-left: 33px;
     
 }
 nav>ul>li>a{
@@ -64,44 +65,245 @@ nav>ul>li>a:hover{
 /* 登录注册 */
 
 nav>div>#login{
-    position: absolute;
-    right: 300px;
+    float: right;
+    margin-right: 35px;
     color: #e5f2f2;
 }
 nav>div>#register{
-    position: absolute;
-    right: 220px;
+    float: right;
     color: #e5f2f2;
 }
 
 /* **************************** main ********************************* */
 
 main{
-    width: 1460px;
+    width: 1080px;
     margin: 100px auto;
 }
 
-/* 轮播图 */
+/* 左侧轮播图 */
 .banner{
     width: 66%;
+    position: relative;
+    float: left;
 }
 .fader{
     width: 100%;
 }
 .slide{
     width: 100%;
-    height: 100%;
 }
 .slide img{
     width: 100%;
-    height: 100%;
 }
 .slide .imginfo{
     box-sizing: content-box;
     font-size: 26px;
     position: absolute;
-    background-color: rgba(0, 9, 9, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     color: #fff;
-    bottom: 42%;
+    bottom: 12%;
     padding-left: 40px;
+}
+/* 轮播图左右箭头 */
+.prev,.next{
+    font-size: 66px;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    font-weight: bold;
+    margin-top: -45px;
+    opacity: 0;
+    line-height: 80px;
+}
+.prev{
+    left: 30px;
+}
+.next{
+    right: 35px;
+}
+.fader:hover .prev{
+    opacity: 0.7;
+    left: 10px;
+    transition: all 1s;
+}
+.fader:hover .next{
+    opacity: 0.7;
+    right: 25px;
+    transition: all 1s;
+}
+
+/* 轮播图页标 */
+.fader .pager_list{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+.pager_list li{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+/* 右侧toppic */
+
+.toppic{
+    width: 32%;
+    float: right;
+}
+.toppic li{
+    width: 100%;
+    position: relative;
+    background-color: #000;
+}
+.toppic li img{
+    width: 100%;
+    height: 192.9px;
+}
+.toppic li i{
+    display: block;
+    opacity: 0.65;
+}
+.toppic li:hover i{
+    opacity: 1;
+    transition: all 2s;
+}
+
+/* 图片中的文字 */
+
+.toppic li div{
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 7);
+    box-sizing: border-box;
+    padding: 4px 20px;
+}
+.toppic li span{
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 7);
+    border-radius: 3px;
+    padding: 5px 8px;
+}
+.toppic li:last-child{
+    margin-top: 15px;
+}
+
+body{
+    background-color: aliceblue;
+}
+.clear{
+    /* 清楚浮动 */
+    clear: both;
+    margin-bottom: 20px;
+}
+
+/* **************************** 博客列表 ********************************* */
+
+.blogsbox{
+    width: 100%;
+    background-color: #fff;
+}
+
+/* 每一条博客 */
+.blog{
+    padding: 15px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.blog .blogtitle{
+    font-size: 18px;
+}
+.blog .blogtitle a{
+    color: #555;
+}
+.blog .blogtitle a:hover{
+    color: rgb(147, 147, 233);
+}
+/* 博客图片 */
+
+.blogpic{
+    overflow: hidden;
+    float: left;
+    width: 320px;
+    height: 170px;
+    margin-right: 15px;
+    margin-top: 8px;
+}
+.blogpic img{
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+}
+.blogpic img:hover{
+    transform: scale(1.2);
+}
+.blog .blogtext{
+    font-size: 14px;
+    color: #566573;
+    margin-top: 15px;
+}
+/* 信息列表 */
+.blog ul>li{
+    height: 18px;
+    float: left;
+    font-size: 12px;
+    margin-right: 25px;
+    margin-top: 40px;
+    line-height: 18px;
+    background-image: url(../images/auicon.jpg);
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+.blog li a{
+    color: #748594;
+}
+
+.blog li a:hover{
+    color: #000;
+}
+.blog .author{
+    background-position-y: -1px;
+}
+.blog .lmname{
+    background-position-y: -25px;
+}
+.blog .timer{
+    background-position-y: -46px;
+}
+.blog .viev{
+    background-position-y: -66px;
+}
+.blog .like{
+    background-position-y: -86px;
+}
+
+/* **************************** footer ********************************* */
+
+footer div{
+    width: 100%;
+    height: 70px;
+    background-color: #555;
+    color: #a5a4a4;
+    line-height: 70px;
+    text-align: center;
+}
+footer div a{
+    color: #a5a4a4;
+}
+footer div a:hover{
+    color: #c1edc1;
 }
